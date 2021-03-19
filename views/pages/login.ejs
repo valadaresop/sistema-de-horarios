@@ -1,0 +1,35 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menulogin"); %>
+        <br>
+        <div class="card-body col-lg-4 m-auto">
+            <div class="container mt-5">
+                <div class="card-header">
+                    <div style="text-align: center;">
+                        <h2>Login</h2><br>
+                    </div>
+
+                    <form method="POST" action="/acessar" class="was-validated">
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" placeholder="usuario@" name="email" required
+                                autofocus>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Digite seu Email de Acesso</div>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="password" class="form-control" placeholder="Digite a senha" name="password"
+                                required>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Digite sua Senha</div>
+                        </div>
+                        <a href="/professor" class="btn btn-secondary btn-block">Acessar</a>
+                        <!--   <button type="submit" class="btn btn-secondary btn-block">ENTRAR</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <%- include("../partials/footer"); %>

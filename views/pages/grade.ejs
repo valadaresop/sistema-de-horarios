@@ -1,0 +1,41 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <br>
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="card" style="width: 60rem;">
+                    <h4 class="card-header">Cadastro da Grade Curricular</h4>
+
+                    <form action="/grade/save" method="POST">
+                        <div class="form-row m-2">
+                            <div class="form-group col-md-6 mt-2">
+                                <label>Nome Curso</label>
+                                <input type="text" class="form-control" name="nomec">
+                            </div>
+                            <div class="form-group col-md-6 mt-2">
+                                <label>Nome Disciplina</label>
+                                <input type="text" class="form-control" name="nomeg">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label>Carga Horária</label>
+                                <input type="text" class="form-control" name="cargahg">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Código Disciplina</label>
+                                <input type="text" class="form-control" name="codigog">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Período</label>
+                                <input type="text" class="form-control" name="periodog">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success ml-3 mr-1 mb-3">Salvar</button>
+                        <a href="/gerenciar/grade" class="btn btn-info mb-3">Gerenciar</a>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <%- include("../partials/footer"); %>

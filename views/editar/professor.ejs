@@ -1,0 +1,63 @@
+<%- include("../partials/header"); %>
+  <%- include("../partials/menu"); %>
+    <br>
+    <div class="container">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="card " style="width: 60rem;">
+          <h4 class="card-header"> Editar Cadastro dos Professores</h4>
+          <form action="/atualizar/professor" method="POST">
+
+            <div class="form-row m-2">
+              <div class="form-group col-md-6">
+                <label>Nome</label>
+                <input type="text" class="form-control" value="<%=professor.nomep%>" name="nomep">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Disciplina Anterior</label>
+                <input type="text" class="form-control" value="<%=professor.anteriorp%>" name="anteriorp">
+              </div>
+            </div>
+
+            <div class="form-row m-2">
+              <div class="form-group col-md-6">
+                <label>Preferência Disciplina</label>
+                <input type="text" class="form-control" value="<%=professor.prefdp%>" name="prefdp">
+              </div>
+              <div class="form-group col-md-3">
+                <label>Preferência de Turno</label>
+                <select class="form-control" value="<%=professor.turnop%>" name="turnop">
+                  <option selected>Selecione</option>
+                  <option>Matutino</option>
+                  <option>Verspetino</option>
+                  <option>Noturno</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label>Dias da Semana</label>
+                <select class="form-control" value="<%=professor.semanap%>" name="semanap">
+                  <option selected>Selecione</option>
+                  <option>Seg</option>
+                  <option>Ter</option>
+                  <option>Qua</option>
+                  <option>Qui</option>
+                  <option>Sex</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group m-3">
+              <label>Observações</label>
+              <textarea class="form-control" value="<%=professor.obsp%>" name="obsp" rows="2"></textarea>
+            </div>
+
+            <input type="hidden" name="id" value="<%=professor.id%>">
+            <button class="btn btn-success m-3">Atualizar</button>
+            <a class="btn btn-primary" href="/gerenciar/professor" role="button"><i class="fas fa-backward"></i></a>
+          </form>
+
+        </div>
+      </div>
+    </div><br>
+    <hr>
+    <%- include("../partials/footer"); %>

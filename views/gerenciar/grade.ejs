@@ -1,0 +1,79 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <div class="container" style="width: 80rem;">
+            <hr class="no-print">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="no-print ml-3">Gerenciar Grade Curricular</h3>
+                    <h3 class="show-print ml-3">Dados de Cadastro da Grade Curricular</h3>
+                    <hr class="no-print">                
+                    <div class="col-lg-12" style="text-align: left;">
+                        <button onclick="window.print()" type="button" class="btn btn-success no-print mb-1"> <i class="fas fa-print"></i> Imprimir </button>
+                    
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover table-striped atable" id="datable">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="no-print">ID</th>
+                                <th scope="col">Nome Curso</th>
+                                <th scope="col"> Nome Disciplina</th>
+                                <th scope="col">Carga Horária</th>
+                                <th scope="col">Código</th>
+                                <th scope="col">Período</th>
+                                <th scope="col" class="no-print">Editar</th>
+                                <th scope="col" class="no-print">Deletar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% grades.forEach(grade =>{ %>
+                                <tr>
+                                    <th scope="row" class="no-print">
+                                        <%=grade.id%>
+                                    </th>
+                                    <td>
+                                        <%=grade.nomec%>
+                                    </td>
+                                    <td>
+                                        <%=grade.nomeg%>
+                                    </td>
+                                    <td>
+                                        <%=grade.cargahg%>
+                                    </td>
+                                    <td>
+                                        <%=grade.codigog%>
+                                    </td>
+                                    <td>
+                                        <%=grade.periodog%>
+                                    </td>
+                                    
+                                    <td class="no-print">
+                                        <a href="/atualizar/grade/<%=grade.id%>" class="btn btn-warning no-print"> <i class="fas fa-edit"></i> </a>
+                                    </td>
+                                    <td class="no-print">
+                                        <form method="post" action="/grade/delete" style="display: inline; margin-left: 10px;
+                                        " onsubmit="confirmarDelecao(event, this)">
+                                            <input type="hidden" name="id" value="<%=grade.id%>">
+                                            <button class="btn btn-danger no-print"> <i class="fas fa-trash-alt"></i> </button>
+                                        </form>
+                                    </td>
+                                    <% })%>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-primary no-print" href="/grade" role="button"><i class="fas fa-backward"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function confirmarDelecao(event, form) {
+                event.preventDefault();
+                var decision = confirm("Você deseja deletar esse item?");
+                if (decision) {
+                    form.submit();
+                }
+            }
+        </script>
+
+        <%- include("../partials/footer"); %>

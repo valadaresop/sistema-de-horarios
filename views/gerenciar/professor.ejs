@@ -1,0 +1,85 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <div class="container" style="width: 80rem;">
+            <hr class="no-print">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="no-print ml-3">Gerenciar Professor</h3>
+                    <h3 class="show-print ml-3">Dados de Cadastro dos Professores</h3>
+
+                    <div class="col-lg-12" style="text-align: left;">
+                        <button onclick="window.print()" type="button" class="btn btn-success no-print mb-1"> <i
+                                class="fas fa-print"></i> Imprimir </button>
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover table-striped atable" id="datable">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="no-print">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Preferência</th>
+                                <th scope="col">Pref. Turno</th>
+                                <th scope="col">Dia</th>
+                                <th scope="col">Disc. Anterior</th>
+                                <th scope="col">Obs</th>
+                                <th scope="col" class="no-print">Editar</th>
+                                <th scope="col" class="no-print">Deletar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% professores.forEach(professor=>{ %>
+                                <tr>
+                                    <th scope="row" class="no-print">
+                                        <%=professor.id%>
+                                    </th>
+                                    <td>
+                                        <%=professor.nomep%>
+                                    </td>
+                                    <td>
+                                        <%=professor.prefdp%>
+                                    </td>
+                                    <td>
+                                        <%=professor.turnop%>
+                                    </td>
+                                    <td>
+                                        <%=professor.semanap%>
+                                    </td>
+                                    <td>
+                                        <%=professor.anteriorp%>
+                                    </td>
+                                    <td>
+                                        <%=professor.obsp%>
+                                    </td>
+                                    <td class="no-print">
+                                        <a href="/editar/professor/<%=professor.id%>" class="btn btn-warning no-print">
+                                            <i class="fas fa-edit"></i> </a>
+                                    </td>
+                                    <td class="no-print">
+                                        <form method="post" action="/professor/delete" style="display: inline; margin-left: 10px;
+                                        " onsubmit="confirmarDelecao(event, this)">
+                                            <input type="hidden" name="id" value="<%= professor.id %>">
+                                            <button class="btn btn-danger no-print"> <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <% })%>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-primary no-print" href="/professor" role="button"><i
+                            class="fas fa-backward"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function confirmarDelecao(event, form) {
+                event.preventDefault();
+                var decision = confirm("Você deseja deletar esse item?");
+                if (decision) {
+                    form.submit();
+                }
+            }
+        </script>
+        <%- include("../partials/footer"); %>

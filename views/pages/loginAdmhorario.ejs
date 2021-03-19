@@ -1,0 +1,31 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menulogin"); %>
+        <br>
+        <div class="container" style="width: 35%;">
+          <hr>
+          <div class="card">
+              <div class="card-header">
+                  <div style="text-align: center;">
+                      <h2>Login Admin</h2>
+                  </div>
+              </div>
+              <div class="card-body">
+                  <form method="POST" action="" class="was-validated">
+                      <div class="form-group">
+
+                          <input type="text" class="form-control" placeholder="usuario@" name="emailadm" required autofocus>
+                      </div>
+                      <div class="form-group">
+
+                          <input type="password" class="form-control" placeholder="senha" name="passwordadm" required>
+                      </div>
+                      <a class="btn btn-info btn-block" href="horario" role="button">Acessar</a>
+                     <!-- <button type="submit" class="btn btn-success btn-block">ENTRAR</button> -->
+                  </form>
+              </div>
+          </div>
+      </div>
+
+
+        <hr>
+        <%- include("../partials/footer"); %>

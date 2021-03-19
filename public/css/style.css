@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(219, 218, 218);
+}
+
+.show-print {
+    display: none;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    .show-print {
+        display: block;
+    }
+}

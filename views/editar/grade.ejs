@@ -1,0 +1,42 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <br>
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="card" style="width: 60rem;">
+                    <h4 class="card-header">Editar Grade Curricular</h4>
+
+                    <form action="/atualizar/grade" method="POST">
+                        <div class="form-row m-2">
+                            <div class="form-group col-md-6 mt-2">
+                                <label>Nome Curso</label>
+                                <input type="text" class="form-control" value="<%=grade.nomec%>" name="nomec">
+                            </div>
+                            <div class="form-group col-md-6 mt-2">
+                                <label>Nome Disciplina</label>
+                                <input type="text" class="form-control" value="<%=grade.nomeg%>" name="nomeg">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label>Carga Horária</label>
+                                <input type="text" class="form-control" value="<%=grade.cargahg%>" name="cargahg">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Código Disciplina</label>
+                                <input type="text" class="form-control" value="<%=grade.codigog%>" name="codigog">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Período</label>
+                                <input type="text" class="form-control" value="<%=grade.periodog%>" name="periodog">
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="id" value="<%=grade.id%>">
+                        <button class="btn btn-success m-3">Atualizar</button>
+                        <a class="btn btn-primary" href="/gerenciar/grade" role="button"><i class="fas fa-backward"></i></a>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <%- include("../partials/footer"); %>
