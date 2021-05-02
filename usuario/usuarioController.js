@@ -15,7 +15,7 @@ router.get("/admingrade", (req, res) => {
 router.get("/adminhorario", (req, res) => {
     res.render("pages/loginAdmhorario")
 });
-router.get("/admusuario", (req, res) => {
+router.get("/adminusuario", (req, res) => {
     res.render("pages/loginAdmusuario")
 });
 
@@ -156,11 +156,11 @@ router.post("/admusuario", (req, res) => {
                 }
                 res.redirect("/usuarios");
             } else {
-                res.redirect("/admusuario");
+                res.redirect("/adminusuario");
             }
 
         } else {
-            res.redirect("/admusuario");
+            res.redirect("/adminusuario");
         }
     });
 
