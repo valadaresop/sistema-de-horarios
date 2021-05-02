@@ -16,7 +16,7 @@ router.get("/adminhorario", (req, res) => {
     res.render("pages/loginAdmhorario")
 });
 router.get("/adminusuario", (req, res) => {
-    res.render("pages/loginAdmusuario")
+    res.render("pages/loginAdmUsuario")
 });
 
 router.get("/usuarios", (req, res) => {
@@ -53,11 +53,11 @@ router.post("/usuario/create", (req, res) => {
             }).then(() => {
                 res.render("./msgs/msgusers")
             }).catch((err) => {
-                res.redirect("/admusuario");
+                res.redirect("/adminusuario");
             });
 
         } else {
-            res.redirect("/admusuario");
+            res.redirect("/adminusuario");
         }
     });
 });
