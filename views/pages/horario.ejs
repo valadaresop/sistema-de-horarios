@@ -4,79 +4,76 @@
         <div class="container">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="card " style="width: 60rem;">
-                    <h4 class="card-header mb-3">Cadastro - Grade Horários</h4>
+                    <h4 class="card-header mb-2">Cadastro da Grade Horários</h4>
 
-                    <form action="/horario/save" method="POST">
+                    <form action="/horario/save" method="POST"><br>
+                        <h5 class="card-title text-center mb-2">Cadastro de uma Faixa de Horário - Semanal</h5>
+                        <hr>
 
+                        <div class="row m-2 ">
+                            <div class="col-12 mb-4">
+                                <label>Horário</label>
+                                <input type="text" class="form-control" name="aulah2">
+                            </div>
+                            <div class="col mb-1">
+                                <label>Disiciplina - Seg</label>
+                                <input type="text" class="form-control" name="disc2">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" name="prof2">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+
+                            <div class="col mb-1">
+                                <label>Disiciplina - Terc</label>
+                                <input type="text" class="form-control" name="disc3">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" name="prof3">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+
+                            <div class="col mb-1">
+                                <label>Disiciplina - Qua</label>
+                                <input type="text" class="form-control" name="disc4">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" name="prof4">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+
+                            <div class="col mb-1">
+                                <label>Disiciplina - Qui</label>
+                                <input type="text" class="form-control" name="disc5">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" name="prof5">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+
+                            <div class="col mb-1">
+                                <label>Disiciplina - Sex</label>
+                                <input type="text" class="form-control" name="disc6">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" name="prof6">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success ml-3 mr-1 mb-4 mt-4">Salvar</button>
+                        <a href="/gerenciar/horario" class="btn btn-primary mb-4 mt-4">Gerenciar</a>
+                    </form><br>
                 </div>
-                <hr>
-                <h4 class="card-header mb-3">Cadastro de uma Faixa de Horário - Semanal</h4>
-                <hr>
-                <div class="row m-2 ">
-                    <div class="col-12 mb-4">
-                        <label>Horário</label>
-                        <input type="text" class="form-control" name="aulah2">
-                    </div>
-                    <div class="col mb-1">
-                        <label>Disiciplina - Seg</label>
-                        <input type="text" class="form-control" name="disc2">
-                    </div>
-                    <div class="col">
-                        <label>Professor</label>
-                        <input type="text" class="form-control" name="prof2">
-                    </div>
-                </div>
-                <div class="row m-2 ">
-
-                    <div class="col mb-1">
-                        <label>Disiciplina - Terc</label>
-                        <input type="text" class="form-control" name="disc3">
-                    </div>
-                    <div class="col">
-                        <label>Professor</label>
-                        <input type="text" class="form-control" name="prof3">
-                    </div>
-                </div>
-                <div class="row m-2 ">
-
-                    <div class="col mb-1">
-                        <label>Disiciplina - Qua</label>
-                        <input type="text" class="form-control" name="disc4">
-                    </div>
-                    <div class="col">
-                        <label>Professor</label>
-                        <input type="text" class="form-control" name="prof4">
-                    </div>
-                </div>
-                <div class="row m-2 ">
-
-                    <div class="col mb-1">
-                        <label>Disiciplina - Qui</label>
-                        <input type="text" class="form-control" name="disc5">
-                    </div>
-                    <div class="col">
-                        <label>Professor</label>
-                        <input type="text" class="form-control" name="prof5">
-                    </div>
-                </div>
-                <div class="row m-2 ">
-
-                    <div class="col mb-1">
-                        <label>Disiciplina - Sex</label>
-                        <input type="text" class="form-control" name="disc6">
-                    </div>
-                    <div class="col">
-                        <label>Professor</label>
-                        <input type="text" class="form-control" name="prof6">
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-success ml-3 mr-1 mb-4 mt-4">Salvar</button>
-                <a href="/gerenciar/horario" class="btn btn-primary mb-4 mt-4">Gerenciar</a>
-
-                </form><br>
             </div>
-        </div>
         </div><br>
         <hr>
         <%- include("../partials/footer"); %>
