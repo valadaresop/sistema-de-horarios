@@ -1,0 +1,86 @@
+
+
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <br>
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="card " style="width: 60rem;">
+                    <h4 class="card-header mb-2">Editar Horários</h4>
+
+                    <form action="/atualizar/horario" method="POST"><br>
+                        <h5 class="card-title text-center mb-2">Editar uma Faixa de Horário - Semanal</h5>
+                        <hr>
+
+                        <div class="row m-2 ">
+                            <div class="col-12 mb-4">
+                                <label>Horário</label>
+                               <input type="text" class="form-control" value="<%=horario.aulah2%>" name="aulah2">
+                            </div>
+                            <div class="col mb-1">
+                                <label>Disiciplina - Seg</label>
+                                <input type="text" class="form-control" value="<%=horario.disc2%>" name="disc2">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" value="<%=horario.prof2%>" name="prof2">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+                            
+                            <div class="col mb-1">
+                                <label>Disiciplina - Terc</label>
+                                <input type="text" class="form-control" value="<%=horario.disc3%>" name="disc3">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" value="<%=horario.prof3%>" name="prof3">
+                            </div>
+                        </div>   <div class="row m-2 ">
+                           
+                            <div class="col mb-1">
+                                <label>Disiciplina - Qua</label>
+                                <input type="text" class="form-control" value="<%=horario.disc4%>" name="disc4">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" value="<%=horario.prof4%>" name="prof4">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+                            
+                            <div class="col mb-1">
+                                <label>Disiciplina - Qui</label>
+                                <input type="text" class="form-control" value="<%=horario.disc5%>" name="disc5">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" value="<%=horario.prof5%>" name="prof5">
+                            </div>
+                        </div>
+                        <div class="row m-2 ">
+                            
+                            <div class="col mb-1">
+                                <label>Disiciplina - Sex</label>
+                                <input type="text" class="form-control" value="<%=horario.disc6%>" name="disc6">
+                            </div>
+                            <div class="col">
+                                <label>Professor</label>
+                                <input type="text" class="form-control" value="<%=horario.prof6%>" name="prof6">
+                            </div>
+                        </div>
+                            
+                        <input type="hidden" name="id" value="<%=horario.id%>">
+                        <button class="btn btn-success m-3">Atualizar</button>
+                        <a class="btn btn-primary" href="/gerenciar/horario" role="button"><i class="fas fa-backward"></i></a>
+
+
+                       
+                    </form><br>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <%- include("../partials/footer"); %>
+
+        

@@ -12,8 +12,8 @@
             <button onclick="window.print()" type="button" class="btn btn-success no-print mb-1"> <i
                 class="fas fa-print"></i> Imprimir </button>
 
-            <!--  <a href="/atualizar/horario" class="btn btn-warning no-print"> <i
-                  class="fas fa-edit"></i> </a> -->  
+              <a href="/editar/topo" class="btn btn-warning no-print"> <i
+                  class="fas fa-edit"></i>Editar </a>  
           </div>
         </div>
         
@@ -63,8 +63,9 @@
                 <th>TER</th>
                 <th>QUA</th>
                 <th>QUI</th>
-                <th>SEX</th>       
-                <th>SAB</th>
+                <th>SEX</th>    
+                <th class="show-print">SAB</th>   
+                <th class="no-print">Editar</th> 
                 <th class="no-print">Excluir</th>       
               </tr>
             </thead>
@@ -97,7 +98,10 @@
                    <p><small class="text-muted"><%=horario.prof6%></small></p> 
                  </td>
     
-              <td></td>
+                 <td class="show-print"></td>
+                 <td class="no-print">
+                  <a href="/atualizar/horario/<%=horario.id%>" class="btn btn-warning no-print"> <i class="fas fa-edit"></i> </a>
+              </td>
                 <td class="no-print">
                   <form method="post" action="/horario/delete" style="display: inline; margin-left: 10px;
                                       " onsubmit="confirmarDelecao(event, this)">

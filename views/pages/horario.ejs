@@ -4,23 +4,58 @@
         <div class="container">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="card " style="width: 60rem;">
-                    <h4 class="card-header mb-2">Cadastro da Grade Horários</h4>
+                    <h4 class="card-header mb-3">Topo - Grade Horários</h4>
+                    
+                    <form action="/horario/save" method="POST">
+                        
+                        <div class="form-row m-2">
+                            <div class="form-group col-md-4">
+                                <label>Curso</label>
+                                <input type="text" class="form-control" name="cursoh">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Semestre</label>
+                                <input type="text" class="form-control" name="semesth">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label>Turno</label>
+                              <input type="text" class="form-control" name="turnoh">
+                          </div>
+                        </div>
 
-                    <form action="/horario/save" method="POST"><br>
-                        <h5 class="card-title text-center mb-2">Cadastrade uma Faixa de Horário - Semanal</h5>
+                        <div class="form-row m-2">
+                          <div class="form-group col-md-4">
+                              <label>Periodo</label>
+                              <input type="text" class="form-control" name="periodh">
+                          </div>
+                          <div class="form-group col-md-4">
+                              <label>Turma</label>
+                              <input type="text" class="form-control" name="turmah">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label>Bloco</label>
+                            <input type="text" class="form-control" name="blocoh">
+                        </div>
+                      </div>
+
+                      <div class="form-row m-2">
+                        <div class="form-group col-md-6">
+                            <label>Aprovação</label>
+                            <input type="text" class="form-control" name="aprovadh">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Versão</label>
+                            <input type="text" class="form-control" name="versaoh">
+                        </div>
+                      
+                    </div>
                         <hr>
-
+                        <h4 class="card-header mb-3">Cadastro de uma Faixa de Horário - Semanal</h4>
+                        <hr>
                         <div class="row m-2 ">
                             <div class="col-12 mb-4">
                                 <label>Horário</label>
-                                <select class="form-control" name="aulah2">
-                                    <option selected>Horário</option>
-                                    <option>8h - 8h50</option>
-                                    <option>8h50 - 9h40</option>
-                                    <option>9h50 - 10h40</option>
-                                    <option>10h40 - 11h30</option>
-                                    <option>11h30 - 12h20</option>
-                                </select>
+                               <input type="text" class="form-control" name="aulah2">
                             </div>
                             <div class="col mb-1">
                                 <label>Disiciplina - Seg</label>
@@ -77,6 +112,7 @@
                             
                         <button type="submit" class="btn btn-success ml-3 mr-1 mb-4 mt-4" >Salvar</button>
                         <a href="/gerenciar/horario" class="btn btn-primary mb-4 mt-4">Gerenciar</a>
+                       
                     </form><br>
                 </div>
             </div>

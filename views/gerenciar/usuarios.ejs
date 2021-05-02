@@ -1,0 +1,59 @@
+<%- include("../partials/header"); %>
+  <%- include("../partials/menu"); %>
+    <div class="container" style="width: 80rem;">
+      <hr class="no-print">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="no-print ml-3">Gerenciar Usuários</h3>
+          <div class="col-lg-12" style="text-align: left;">
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-hover table-striped atable" id="datable">
+            <thead>
+              <tr>
+                <th scope="col" class="no-print">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col" class="no-print">Deletar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% usuarios.forEach(usuario=>{ %>
+                <tr>
+                  <th scope="row" class="no-print">
+                    <%=usuario.id%>
+                  </th>
+                  <td>
+                    <%=usuario.usuario%>
+                  </td>
+                  <td>
+                    <%=usuario.email%>
+                  </td>
+
+                  <td class="no-print">
+                    <form method="post" action="/usuario/delete" style="display: inline; margin-left: 10px;
+                                        " onsubmit="confirmarDelecao(event, this)">
+                      <input type="hidden" name="id" value="<%= usuario.id %>">
+                      <button class="btn btn-danger no-print"> <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </form>
+                  </td>
+                  <% })%>
+                </tr>
+            </tbody>
+          </table>
+          <a class="btn btn-primary no-print" href="/usuarios" role="button"><i class="fas fa-backward"></i></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function confirmarDelecao(event, form) {
+        event.preventDefault();
+        var decision = confirm("Você deseja deletar esse item?");
+        if (decision) {
+          form.submit();
+        }
+      }
+    </script>
+    <%- include("../partials/footer"); %>

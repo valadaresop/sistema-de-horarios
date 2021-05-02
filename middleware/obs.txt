@@ -1,0 +1,6 @@
+Ex. Uso do middleware
+
+router.get("/usuarios", middleware, (req, res) => {
+    res.render("pages/criarUsuario") 
+});
+

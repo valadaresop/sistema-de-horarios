@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const slugify = require("slugify");
-const Grade = require('../grade/gradeModel')
+const Grade = require('../grade/gradeModel');
+const middleware = require("../middleware/middleware");
 
 //Rota Principal
 router.get("/grade", (req, res) => {

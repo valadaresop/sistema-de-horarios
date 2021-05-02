@@ -1,13 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const slugify = require("slugify");
-const Horario = require('../horario/horarioModel')
+const Horario = require('../horario/horarioModel');
+const middleware = require("../middleware/middleware");
 
 //Rota Principal
 router.get("/horario", (req, res) => {
     res.render("pages/horario")
 });
 
+//Rota Editar Topo
+router.get("/editar/topo", (req, res) => {
+    res.render("editar/topoHorario")
+});
 
 //Captura do POST horario
 router.post('/horario/save', (req, res) => {

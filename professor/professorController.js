@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const slugify = require("slugify");
-const Professor = require('../professor/professorModel')
+const Professor = require('../professor/professorModel');
+const middleware = require("../middleware/middleware");
 
 //Rota da página
 router.get("/professor", (req, res) => {

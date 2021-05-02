@@ -1,0 +1,63 @@
+<%- include("../partials/header"); %>
+    <%- include("../partials/menu"); %>
+        <br>
+        <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="card " style="width: 60rem;">
+                    <h4 class="card-header">Cadastro do Topo de Horários</h4>
+
+                    <form action="/topo/save" method="POST">
+
+                        <div class="form-row m-2">
+                            <div class="form-group col-md-4">
+                                <label>Curso</label>
+                                <input type="text" class="form-control" name="cursoh">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Semestre</label>
+                                <input type="text" class="form-control" name="semesth">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label>Turno</label>
+                              <input type="text" class="form-control" name="turnoh">
+                          </div>
+                        </div>
+
+                        <div class="form-row m-2">
+                          <div class="form-group col-md-4">
+                              <label>Periodo</label>
+                              <input type="text" class="form-control" name="periodh">
+                          </div>
+                          <div class="form-group col-md-4">
+                              <label>Turma</label>
+                              <input type="text" class="form-control" name="turmah">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label>Bloco</label>
+                            <input type="text" class="form-control" name="blocoh">
+                        </div>
+                      </div>
+
+                      <div class="form-row m-2">
+                        <div class="form-group col-md-6">
+                            <label>Aprovação</label>
+                            <input type="text" class="form-control" name="aprovadh">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Versão</label>
+                            <input type="text" class="form-control" name="versaoh">
+                        </div>
+                      
+                    </div>
+
+                      
+                 
+                    <button class="btn btn-success m-3">Atualizar</button>
+                    <a class="btn btn-primary" href="/gerenciar/horario" role="button"><i class="fas fa-backward"></i></a>
+                        
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <%- include("../partials/footer"); %>
