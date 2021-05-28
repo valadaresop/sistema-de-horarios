@@ -59,13 +59,13 @@ router.post("/professor/delete", (req, res) => {
                     id: id
                 }
             }).then(() => {
-                res.redirect("/gerenciar/professor");
+                res.redirect("/professor");
             });
         } else { // NÃO FOR UM NÚMERO
-            res.redirect("/gerenciar/professor");
+            res.redirect("/professor");
         }
     } else { // NULL
-        res.redirect("/gerenciar/professor");
+        res.redirect("/professor");
     }
 });
 
